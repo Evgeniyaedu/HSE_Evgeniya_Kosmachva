@@ -113,7 +113,7 @@ if __name__ == "__main__":
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Файл {file_path} не найден")
 
-        with open("/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/10000_efrsb_messages.json", 'r', encoding='utf-8') as file:
+        with open("/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/1000_efrsb_messages.json", 'r', encoding='utf-8') as file:
             return json.load(file)
 
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     def main():
         try:
 
-            input_file = "/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/10000_efrsb_messages.json"  # Измените на актуальный путь
+            input_file = "/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/1000_efrsb_messages.json"
             output_file = "emails.json"  # Файл будет создан автоматически
 
             print("Загрузка данных...")
