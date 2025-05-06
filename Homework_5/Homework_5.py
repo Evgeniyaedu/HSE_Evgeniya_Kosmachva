@@ -2,7 +2,7 @@ with open ('traders.txt', 'r', encoding='utf-8') as f:
     inns = [line.strip() for line in f if line.strip().isdigit() and len(line.strip()) in (10, 12)]
     print("Список ИНН:", inns)
 
-    # task 1 b343
+    # task 1 b
 
     import json
 
@@ -149,7 +149,7 @@ if __name__ == "__main__":
         try:
 
             input_file = "/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/1000_efrsb_messages.json"
-            output_file = "emails.json" 
+            output_file = "emails.json"
 
             print("Загрузка данных...")
             dataset = load_dataset(input_file)
@@ -170,7 +170,7 @@ if __name__ == "__main__":
 
         except Exception as e:
             print(f"Ошибка: {str(e)}")
-
+#889
 
     if __name__ == '__main__':
         main()
