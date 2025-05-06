@@ -2,7 +2,7 @@ with open ('traders.txt', 'r', encoding='utf-8') as f:
     inns = [line.strip() for line in f if line.strip().isdigit() and len(line.strip()) in (10, 12)]
     print("Список ИНН:", inns)
 
-    # task 1 b
+    # task 1 b343
 
     import json
 
