@@ -149,7 +149,7 @@ if __name__ == "__main__":
         try:
 
             input_file = "/Users/evgeniakosmaceva/PyCharmMiscProject/Homework_5/1000_efrsb_messages.json"
-            output_file = "emails.json"  # Файл будет создан автоматически
+            output_file = "emails.json" 
 
             print("Загрузка данных...")
             dataset = load_dataset(input_file)
