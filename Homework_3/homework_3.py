@@ -39,3 +39,55 @@ def right_triangle_area(leg_a, leg_b):
 print(right_triangle_area(6, 8))
 
 # task 2 part 1
+
+import time
+from lesson_2_dzdata import courts
+
+for i in courts:
+    print(i['court_name'])
+
+    import time
+    from traceback import format_exception
+    from lesson_2_dzdata import respondents, courts
+
+
+    def gen_court_header(court: dict) -> str:
+        header = f"В {court['court_name']}\n" \
+                 f"Адрес: {court['court_address']}\n"
+        return header
+
+
+    def gen_respondent_header(respondent: dict) -> str:
+        header = f"Ответчик: {respondent['short_name']}\n" \
+                 f"ИНН {respondent['inn']} ОГРН {respondent['ogrn']}\n" \
+                 f"Адрес: {respondent['address']}\n" \
+                 f"---------------"
+        return header
+
+    def gen_number_header (respondent: dict) -> str:
+        header = f"Дело №: {respondent['case_number']}\n"
+        return header
+
+
+    def main():
+        print('start')
+        court_mapping = {i['court_code']: i for i in courts}
+        for i in respondents:
+            try:
+                code = i['case_number'][:3]
+                court = court_mapping[code]
+                court_header = gen_court_header(court)
+                print(court_header)
+                respondent_header = gen_respondent_header(i)
+                print(respondent_header)
+                case_number_header = gen_number_header(i)
+                print(case_number_header)
+
+            except Exception as exc:
+                format_exception(exc)
+                continue
+
+
+    if __name__ == "__main__":
+        main()
+        print('stop')
