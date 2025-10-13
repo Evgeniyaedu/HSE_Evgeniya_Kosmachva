@@ -1,7 +1,7 @@
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "8324062238:AAG5z8Ks6GDObhmY6madjXW2wmqVvpdzbO4"
+TOKEN = "" # ключ отдельно
 
 
 def main_menu():
