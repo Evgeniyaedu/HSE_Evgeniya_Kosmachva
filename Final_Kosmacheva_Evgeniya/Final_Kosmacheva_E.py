@@ -114,6 +114,7 @@ class ParserCBRF():
     def __init__(self):
         self.data = []
 
+
     def _parsing(self):
         now = datetime.now().strftime("%d.%m.%Y")
         link = f"https://www.cbr.ru/hd_base/metall/metall_base_new/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2025&UniDbQuery.To={now}&UniDbQuery.Gold=true&UniDbQuery.Silver=true&UniDbQuery.Platinum=true&UniDbQuery.Palladium=true&UniDbQuery.so=1"
@@ -143,11 +144,13 @@ class ParserCBRF():
                     }
                     self.data.append(file)
 
+
     def _save_to_json(self):
         if not os.path.exists("parsed_data"):
             os.makedirs("parsed_data")
         with open("parsed_data/Metals.json", "w") as f:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
+
 
     def start(self):
         self._parsing()
@@ -170,6 +173,7 @@ class KeyMetalCBRF():
         if n == False:
             print("Выберите другую дату")
 
+
     def keymetalCBRF_by_period_of_date(self, end_date, start_date):
         with open("parsed_data/Metals.json", "r") as f:
             self.data = json.load(f)
@@ -190,6 +194,7 @@ class KeyMetalCBRF():
                     f"Date: {i["Date"]},Gold:{i["Gold"]}, Silver: {i["Silver"]}, Platina: {i["Platina"]}, Palladiy: {i["Palladiy"]}")
         if n == False:
             print("Выберите другую дату")
+
 
     def keymetalCBRF_by_last_date(self):
         with open("parsed_data/Metals.json", "r") as f:
